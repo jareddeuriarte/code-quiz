@@ -12,7 +12,8 @@ body{
     height: 100vh;
 }
 
-.quiz-wrapper{
+
+#start-screen{
     padding: 108px;
     margin: auto;
     background-color: white;
