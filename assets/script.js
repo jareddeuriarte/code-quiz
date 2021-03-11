@@ -1,11 +1,24 @@
 var startScreen = document.getElementById("start-screen");
 var startButton = document.getElementById("start-button");
+var questionContainer = document.createElement("div")
 
-// WHEN I click the start button
-// THEN a timer starts and I am presented with a question
+// WHEN I click the start button ✅
+// THEN a timer starts ❌ and I am presented with a question ✅
+
+// QUESTION SCREEN AND BUTTONS SHOULD APPEAR
+function startQuestions(){
+    console.log("QUIZ STARTS!");
+    questionContainer.textContent = "Am I doing this right?";
+    document.body.appendChild(questionContainer);
+}
+
+
+
+
 startButton.addEventListener("click", function() {
     // console.log("CLICKED!");
     startScreen.setAttribute("style", "display:none;")
+    startQuestions();
 
 })
 
