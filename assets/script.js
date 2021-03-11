@@ -39,15 +39,13 @@ var questions = [
     }
 ]
 
-
-
 // WHEN I click the start button ✅
 // THEN a timer starts ❌ and I am presented with a question ✅
 
 // QUESTION SCREEN AND BUTTONS SHOULD APPEAR
 function startQuestions(){
     console.log("QUIZ STARTS!");
-    questionContainer.textContent = "Am I doing this right?"; // Put big object of questions here.
+    questionContainer.textContent = questions.filter(item => item.question);
     document.body.appendChild(questionContainer);
 }
 
