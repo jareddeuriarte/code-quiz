@@ -39,17 +39,26 @@ var questions = [
     }
 ]
 
+var currentQuestion = 0 
+
 // WHEN I click the start button ✅
 // THEN a timer starts ❌ and I am presented with a question ✅
 
 // QUESTION SCREEN AND BUTTONS SHOULD APPEAR
 function startQuestions(){
-    console.log("QUIZ STARTS!");
-    questionContainer.textContent = questions.filter(item => item.question);
+    var button = document.createElement("button")
+    button.textContent = "Next Question";
+    button.addEventListener("click", nextQuestion);
+    questionContainer.textContent = questions [currentQuestion].question;
     document.body.appendChild(questionContainer);
+    document.body.appendChild(button);
 }
 
+function nextQuestion(){
+    currentQuestion++;
+    questionContainer.textContent = questions [currentQuestion].question;
 
+}
 
 
 startButton.addEventListener("click", function() {
